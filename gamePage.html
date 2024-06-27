@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #511730;">
+    <!--* Game page goes from here  -->
+    <div class="container gamePage">
+        <h1 class="text-center mt-4 kalam-bolder">
+            MaxiMath Mania
+        </h1>
+        <div class="mt-5 text-center userName">
+            <label for="" class="kalam-bold">Enter Your Name :  </label>
+            <input class="inputClass" type="text" placeholder="Enter Your Name" autocomplete="off" onfocus="emptyPlaceholder(event)" onblur="fillPlaceholder(event)"> 
+        </div> 
+        <div id="startBtn" class="mt-5 text-center">
+            <button id="start" class="kalam-bolder">Start</button>
+        </div>
+        <div class="row time kalam-regular text-center justify-content-center">
+            <div id="timeRemaining" class="col-md-6 text-center mb-md-0 mb-4">
+                Time Remaining : 100
+            </div>
+            <div id="queTimeRemaining" class="col-md-6 text-center">
+                Question Change In : 20
+            </div>
+        </div>
+        <div class="row text-center mt-4 kalam-bolder" style="font-size: 3rem;">
+            <p style="color: #FED766;">Number</p>
+            <p id="getNumber">2</p>
+        </div>
+        <div class="row text-center valueButtons">
+            <div class="col-md-6 text-md-end">
+                <button class="kalam-bolder" id="btn_1">+ 234</button>
+            </div>
+            <div class="col-md-6 text-md-start">
+                <button class="kalam-bolder" id="btn_2">x 343</button>
+            </div>
+        </div>
+        <div class="row text-center mt-5">
+            <div class="col-md-4">
+                <button class="kalam-bolder" id="restart">Re-Start</button>
+            </div>
+            <div class="col-md-4">
+                <button class="kalam-bolder" id="analysis">Analysis</button>
+            </div>
+            <div class="col-md-4">
+                <button class="kalam-bolder" id="home">Home</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--* Analysis Page goes from here  -->
+    <div class="container analysisPage hide">
+        <div class="row text-center">
+            <h2 class="text-center mt-4 mb-4 kalam-bold" style="text-shadow: 2px 3px 4px #456990;">---Analysis---</h2>
+            <p id="showName" class="text-center mt-3 kalam-regular" style="font-size: 2rem; color:#DBD5B2;"> </p>
+            <p id="showInitialValue" class="text-center mt-2 pb-4 kalam-regular" style="font-size: 2rem; color:#DBD5B2;"> </p>
+            <div id="questions" class="col-md-4">
+                <h1 class="mb-4">Options</h1>
+                <!-- <p class="paraAnalysis kalam-bolder">
+                    -12 /23
+                </p> -->
+            </div>
+            <div id="responses" class="col-md-4" style="border-left : 3px solid #DBD5B2;">
+                <h1 class="mb-4">Your Response</h1>
+                <!-- <p class="paraAnalysis kalam-bolder">
+                    -12   / 23
+                </p> -->
+            </div>
+            <div id="answers" class="col-md-4" style="border-left : 3px solid #DBD5B2;">
+                <h1 class="mb-4">Answers</h1>
+                <!-- <p class="paraAnalysis kalam-bolder">
+                    -12   / 23
+                </p> -->
+            </div>
+            <span class="kalam-bolder mt-5" style="font-size: 2.5rem; text-decoration : none;">You won the game</span>
+            <button class="kalam-bolder" id="lastBtn">Re-Start</button>
+        </div>
+    </div>
+
+
+    <div class="container loadingPage hide justify-content-center align-items-center align-content-center text-center" style="font-size: 4rem; height: 100vh;">
+        <h1 class="kalam-bolder justify-content-center align-items-center align-content-center text-center"> Please wait... Your score is shown here </h1>
+    </div>
+    
+    <!--* JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
